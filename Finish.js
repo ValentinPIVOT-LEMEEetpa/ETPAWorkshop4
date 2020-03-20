@@ -1,22 +1,21 @@
 
-game.scene.start("main");
+//game.scene.start("Finish");
 
-class main extends Phaser.Scene{
+class Finish extends Phaser.Scene{
+
 	constructor(){
-	    super('main');
+	    super('Finish');
 	}
 
-
-
 	preload(){
-		this.load.image('background','assets/main/background.png');
-		this.load.image('titre','assets/main/ecrantitre.png');
+		this.load.image('background','assets/finish/background.png');
+		this.load.image('win','assets/finish/youwin.png');
 	};
 	create(){
 		this.add.image(400,300,'background');
-		this.add.image(1024,768,'titre');
 	};
 	update(){
+
 	};
 }
 
@@ -31,9 +30,7 @@ physics: {
             debug: true
         }
     },
-scene: [main]
+scene: [ Finish ]
 };
 
 var game = new Phaser.Game(config);
-var cursors;
-var text;
